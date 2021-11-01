@@ -128,4 +128,3 @@ while True:
 
     else:
         print("Ivedėte bloga pasirinkimų ID")
-d
