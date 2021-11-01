@@ -105,19 +105,17 @@ while True:
             borrow_book(choose_book_to_borrow)
 
     elif options == "3":
-        b = 0
         for book in Library.book_list:
             if book.book_taken == "Paskolinta":
-                print(book.book_id, book.title, book.author_name, book.book_release_date, book.book_taken)
+                print(f"{book.book_id}| {book.title}| {book.author_name}| {book.book_release_date}m.| {book.book_taken}")
 
         choose_book_to_return = int(input("Įveskite knygos ID kurią norite grąžinti\n"))
         return_book(choose_book_to_return)
 
     elif options == "4":
         search = input("Įveskite tikslų knygos pavadinimą arba autoriaus vardą ir pavardę\n")
-        print("ID, Pavadinimas, Autoriaus vardas, Leidimo metai")
         for book in search_book(search):
-            print(f"{book.book_id},{book.title}, {book.author_name}, {book.book_release_date}m., {book.book_taken}")
+            print(f"{book.book_id}| {book.title}| {book.author_name}| {book.book_release_date}m.| {book.book_taken}")
 
     elif options == "5":
         display_books()
